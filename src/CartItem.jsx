@@ -18,6 +18,16 @@ const CartItem = ({ onContinueShopping }) => {
     return totalAmount;
   };
 
+  const calculateTotalQuantity = () =>{
+    let totalQuantity = 0;
+    cart.forEach(item => {
+        if(item.quantity>0){
+            totalQuantity += item.quantity;
+        }
+    });
+    return totalQuantity;
+  };
+
   const handleContinueShopping = (e) => {
     onContinueShopping(e);
   };
@@ -71,7 +81,7 @@ const CartItem = ({ onContinueShopping }) => {
           </div>
         ))}
       </div>
-      <div style={{ marginTop: '20px', color: 'black' }} className='total_cart_amount'></div>
+      <div style={{ marginTop: '20px', color: 'black' }} className='total_cart_amount'>Total Plants Amount: {calculateTotalQuantity()}</div>
       <div className="continue_shopping_btn">
         <button className="get-started-button" onClick={(e) => handleContinueShopping(e)}>Continue Shopping</button>
         <br />
