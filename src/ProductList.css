@@ -46,23 +46,23 @@ body {
     width: 100vw;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 .product-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 20px;
     /* background-color: pink; */
-    /* justify-content: space-between; */
-    padding: 20px;
-    width: 100%;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 /* Product Card */
 .product-card {
-    flex: 0 0 calc(33.33% - 20px); /* Adjust width for 3 cards per row with 20px gap */
-    max-width: calc(26.33% - 20px); /* Adjust max-width for 3 cards per row with 20px gap */
+    flex: 1 1 auto; /* Adjust width for 3 cards per row with 20px gap */
+    width: calc(33.33% - 20px); /* Adjust max-width for 3 cards per row with 20px gap */
+    min-width: 200px;
     margin-bottom: 20px;
     padding: 20px;
     background-color: #fff;
@@ -223,15 +223,15 @@ body {
   }
   @media (max-width: 1200px) {
     .product-card {
-      flex: 1 1 calc(33.33% - 20px); /* Adjust width for 3 cards per row with 20px gap on medium screens */
-      max-width: calc(33.33% - 20px); /* Adjust max-width for 3 cards per row with 20px gap on medium screens */
+      flex: 1 1 calc(50% - 20px); /* Adjust width for 3 cards per row with 20px gap on medium screens */
+      max-width: calc(50% - 20px); /* Adjust max-width for 3 cards per row with 20px gap on medium screens */
     }
   }
   
   @media (max-width: 768px) {
     .product-card {
-      flex: 1 1 calc(50% - 20px); /* Adjust width for 2 cards per row with 20px gap on small screens */
-      max-width: calc(50% - 20px); /* Adjust max-width for 2 cards per row with 20px gap on small screens */
+      flex: 1 1 calc(100% - 20px); /* Adjust width for 2 cards per row with 20px gap on small screens */
+      max-width: calc(100% - 20px); /* Adjust max-width for 2 cards per row with 20px gap on small screens */
     }
     .navbar {
         flex-direction: column; /* Change flex direction to stack items vertically */
